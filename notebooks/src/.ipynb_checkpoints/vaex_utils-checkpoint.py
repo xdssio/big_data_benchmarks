@@ -11,10 +11,14 @@ def standard_deviation(df):
     return df.fare_amount.std()
 
 def sum_columns(df):
-    return df.fare_amount + df.passenger_count
+    df['sum'] = df.fare_amount + df.passenger_count
+    df['sum'].nop()
+    return df['sum']
 
 def product_columns(df):
-    return df.fare_amount * df.passenger_count
+    df['product'] = df.fare_amount * df.passenger_count
+    df['product'].nop()
+    return df['product']
 
 def complicated_arithmetic_operation(df):
     theta_1 = df.pickup_longitude
@@ -23,7 +27,9 @@ def complicated_arithmetic_operation(df):
     phi_2 = df.dropoff_latitude
     temp = (np.sin((theta_2-theta_1)/2*np.pi/180)**2
            + np.cos(theta_1*np.pi/180)*np.cos(theta_2*np.pi/180) * np.sin((phi_2-phi_1)/2*np.pi/180)**2)
-    return 2 * np.arctan2(np.sqrt(temp), np.sqrt(1-temp))
+    df['complicated'] = 2 * np.arctan2(np.sqrt(temp), np.sqrt(1-temp))
+    df['complicated'].nop()
+    return df['complicated']
 
 def value_counts(df):
     return df.passenger_count.value_counts()
@@ -46,5 +52,7 @@ def filter_data(df):
               (df.pickup_latitude > lat_min)    & (df.pickup_latitude < lat_max) & \
               (df.dropoff_longitude > long_min) & (df.dropoff_longitude < long_max) & \
               (df.dropoff_latitude > lat_min)   & (df.dropoff_latitude < lat_max)
-    return df[expr_filter]
+    ret = df[expr_filter]
+    print(ret.head(3)) # evalaute the filter
+    return ret
 
