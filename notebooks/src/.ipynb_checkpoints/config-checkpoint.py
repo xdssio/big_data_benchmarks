@@ -1,1 +1,1 @@
-repetitions = 5
+repetitions = 1
