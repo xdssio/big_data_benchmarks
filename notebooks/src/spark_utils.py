@@ -8,7 +8,7 @@ sqlContext = sql.SQLContext(sc)
 
 
 def read_file(df=None, data_path=None):
-    return sqlContext.read.csv(data_path, sep = ',', header = 'True', inferSchema = 'true')
+    return sqlContext.read.parquet(data_path)
     
 def mean(df):
     return df.select(f.mean('fare_amount')).collect()

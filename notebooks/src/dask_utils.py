@@ -3,7 +3,7 @@ import numpy as np
 
 
 def read_file(df=None, data_path=None):
-    return dd.read_csv(data_path)
+    return dd.read_parquet(data_path, engine='pyarrow')
     
 def mean(df):
     return df.fare_amount.mean().compute()
