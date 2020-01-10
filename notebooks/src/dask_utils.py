@@ -24,7 +24,8 @@ def complicated_arithmetic_operation(df):
     phi_2 = df.dropoff_latitude
     temp = (np.sin((theta_2-theta_1)/2*np.pi/180)**2
            + np.cos(theta_1*np.pi/180)*np.cos(theta_2*np.pi/180) * np.sin((phi_2-phi_1)/2*np.pi/180)**2)
-    return 2 * np.arctan2(np.sqrt(temp), np.sqrt(1-temp))
+    ret = 2 * np.arctan2(np.sqrt(temp), np.sqrt(1-temp))
+    return dd.compute(ret)
 
 def value_counts(df):
     return df.fare_amount.value_counts().compute()
@@ -32,9 +33,10 @@ def value_counts(df):
 def groupby_statistics(df):
     return df.groupby(by='pickup_hour').agg({'fare_amount': ['mean', 'std'], 
                                                'tip_amount': ['mean', 'std']
-                                              })
+                                              }).compute()
 def join(df, other):
-    return df.join(other=other, on = 'pickup_hour', rsuffix = '_right')
+    return dd.merge(df, other, left_index=True, right_index=True).compute()
+#     return df.join(other=other, on = 'pickup_hour', rsuffix = '_right')
     
 
 def filter_data(df):
@@ -47,4 +49,5 @@ def filter_data(df):
                   (df.pickup_latitude > lat_min)    & (df.pickup_latitude < lat_max) & \
                   (df.dropoff_longitude > long_min) & (df.dropoff_longitude < long_max) & \
                   (df.dropoff_latitude > lat_min)   & (df.dropoff_latitude < lat_max)
+    df[expr_filter].compute()
     return df[expr_filter]
