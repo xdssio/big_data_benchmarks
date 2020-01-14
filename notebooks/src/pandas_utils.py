@@ -11,10 +11,10 @@ def standard_deviation(df):
     return df.fare_amount.std()
 
 def sum_columns(df):
-    return df.eval('fare_amount + passenger_count') 
+    return df.eval('fare_amount + trip_distance') 
 
 def product_columns(df):
-    return df.eval('fare_amount * passenger_count') 
+    return df.eval('fare_amount * trip_distance') 
 
 def complicated_arithmetic_operation(df):
     theta_1 = df.pickup_longitude
@@ -29,11 +29,11 @@ def value_counts(df):
     return df.passenger_count.value_counts()
 
 def groupby_statistics(df):
-    return df.groupby(by='pickup_hour').agg({'fare_amount': ['mean', 'std'], 
+    return df.groupby(by='passenger_count').agg({'fare_amount': ['mean', 'std'], 
                                                'tip_amount': ['mean', 'std']
                                               })
 def join(df, other):
-    return df.join(other=other, on = 'pickup_hour', rsuffix = '_right')
+    return df.join(other=other, on = 'passenger_count', rsuffix = '_right')
     
 
 def filter_data(df):
