@@ -1,28 +1,24 @@
-Requirement already up-to-date: pip in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (19.3.1)
-Requirement already up-to-date: dask in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (2.9.1)
-Requirement already up-to-date: numpy in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (1.18.1)
-Requirement already up-to-date: fsspec in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (0.6.2)
-Collecting fastparquet
-  Downloading https://files.pythonhosted.org/packages/58/49/dccb790fa17ab3fbf84a6b848050083c7a1899e9586000e34e3e4fbf5538/fastparquet-0.3.2.tar.gz (151kB)
-Requirement already up-to-date: pyarrow in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (0.15.1)
-Requirement already up-to-date: tqdm in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (4.41.1)
-Requirement already satisfied, skipping upgrade: pandas>=0.19 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastparquet) (0.24.2)
-Requirement already satisfied, skipping upgrade: numba>=0.28 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastparquet) (0.38.0)
-Collecting thrift>=0.11.0
-  Downloading https://files.pythonhosted.org/packages/97/1e/3284d19d7be99305eda145b8aa46b0c33244e4a496ec66440dac19f8274d/thrift-0.13.0.tar.gz (59kB)
-Requirement already satisfied, skipping upgrade: six in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastparquet) (1.11.0)
-Requirement already satisfied, skipping upgrade: python-dateutil>=2.5.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pandas>=0.19->fastparquet) (2.7.3)
-Requirement already satisfied, skipping upgrade: pytz>=2011k in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pandas>=0.19->fastparquet) (2018.4)
-Requirement already satisfied, skipping upgrade: llvmlite>=0.23.0dev0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from numba>=0.28->fastparquet) (0.23.1)
-Building wheels for collected packages: fastparquet, thrift
-  Building wheel for fastparquet (setup.py): started
-  Building wheel for fastparquet (setup.py): finished with status 'done'
-  Created wheel for fastparquet: filename=fastparquet-0.3.2-cp36-cp36m-linux_x86_64.whl size=245502 sha256=3e1be947f2a20da5e438d2a382c02e08d4be23d400e5196f8ae214441fc6bbfe
-  Stored in directory: /home/ec2-user/.cache/pip/wheels/b9/36/13/01416a760ddcab0eb8281ec9c9ffcbed945c9b831647c8b904
-  Building wheel for thrift (setup.py): started
-  Building wheel for thrift (setup.py): finished with status 'done'
-  Created wheel for thrift: filename=thrift-0.13.0-cp36-cp36m-linux_x86_64.whl size=388990 sha256=7164eda73ffc084633e75f444782d9ef6d11a3825d6824120e6ed297c3ee9ac6
-  Stored in directory: /home/ec2-user/.cache/pip/wheels/02/a2/46/689ccfcf40155c23edc7cdbd9de488611c8fdf49ff34b1706e
-Successfully built fastparquet thrift
-Installing collected packages: thrift, fastparquet
-Successfully installed fastparquet-0.3.2 thrift-0.13.0
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/57/36/67f809c135c17ec9b8276466cc57f35b98c240f55c780689ea29fa32f512/pip-20.0.1-py2.py3-none-any.whl (1.5MB)
+Collecting dask
+  Downloading https://files.pythonhosted.org/packages/03/fb/d060d926b4e3af64b687f59f907435a9e8497a6f422c2e4aabcd47df2555/dask-2.9.2-py3-none-any.whl (780kB)
+Collecting numpy
+  Downloading https://files.pythonhosted.org/packages/62/20/4d43e141b5bc426ba38274933ef8e76e85c7adea2c321ecf9ebf7421cedf/numpy-1.18.1-cp36-cp36m-manylinux1_x86_64.whl (20.1MB)
+Collecting fsspec
+  Downloading https://files.pythonhosted.org/packages/dd/1f/7028dacd3c28f34ce48130aae73a88fa5cc27b6b0e494fcf2739f7954d9d/fsspec-0.6.2-py3-none-any.whl (62kB)
+Collecting tqdm
+  Downloading https://files.pythonhosted.org/packages/72/c9/7fc20feac72e79032a7c8138fd0d395dc6d8812b5b9edf53c3afd0b31017/tqdm-4.41.1-py2.py3-none-any.whl (56kB)
+Collecting pyarrow
+  Downloading https://files.pythonhosted.org/packages/dd/77/5865b367a6792da2f811ae49391c1f85c29b29663555aac0a118fe8e153e/pyarrow-0.15.1-cp36-cp36m-manylinux1_x86_64.whl (59.0MB)
+Requirement not upgraded as not directly required: six>=1.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pyarrow) (1.11.0)
+Installing collected packages: pip, dask, numpy, fsspec, tqdm, pyarrow
+  Found existing installation: pip 10.0.1
+    Uninstalling pip-10.0.1:
+      Successfully uninstalled pip-10.0.1
+  Found existing installation: dask 0.17.5
+    Uninstalling dask-0.17.5:
+      Successfully uninstalled dask-0.17.5
+  Found existing installation: numpy 1.14.3
+    Uninstalling numpy-1.14.3:
+      Successfully uninstalled numpy-1.14.3
+Successfully installed dask-2.9.2 fsspec-0.6.2 numpy-1.18.1 pip-20.0.1 pyarrow-0.15.1 tqdm-4.41.1
