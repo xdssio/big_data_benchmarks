@@ -10,3 +10,4 @@ The analysis is done on a 100GB Texi data.
 * [ ] Turicreate
 * [ ] Dask
 * [ ] Spark
+* [ ] Modin
