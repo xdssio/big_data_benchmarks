@@ -10,5 +10,6 @@ The analysis is done on a 100GB Texi data.
 * [ ] [Turicreate](https://github.com/apple/turicreate)
 * [ ] [Dask](https://github.com/dask/dask)
 * [ ] [Spark](https://github.com/apache/spark)
+* [ ] [Spark - koala](https://github.com/databricks/koalas)
 * [ ] [Modin](https://github.com/modin-project/modin)
 * [ ] [Datatable](https://github.com/h2oai/datatable)
