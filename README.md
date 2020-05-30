@@ -11,8 +11,8 @@ The analysis is done on a [100GB Texi data 2009 - 2015](https://www1.nyc.gov/sit
 * [x] [H2O](https://github.com/h2oai/h2o-3)
 * [x] [Turicreate](https://github.com/apple/turicreate)
 * [x] [Dask](https://github.com/dask/dask)
-* [x] [Spark](https://github.com/apache/spark)
-* [x] [Spark - koala](https://github.com/databricks/koalas)
+* [x] [PySpark](https://github.com/apache/spark)
+* [x] [koalas](https://github.com/databricks/koalas)
 * [x] [Modin](https://github.com/modin-project/modin)
 * [x] [Datatable](https://github.com/h2oai/datatable)
 
