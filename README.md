@@ -1,7 +1,7 @@
 Big data techonlogy benchmarks
 This project is designed to compare big data technologies comparisons for cleaning, manipulating and generally wrangling data in purpose of analysis and machine learning. 
 
-Please read this [Blog](https://medium.com/p/a453a1f8cc13/edit) for more information.
+The benchmarks for this [article](https://towardsdatascience.com/beyond-pandas-spark-dask-vaex-and-other-big-data-technologies-battling-head-to-head-a453a1f8cc13).
 
 The analysis is done on a [100GB Texi data 2009 - 2015](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
